@@ -49,7 +49,7 @@ double wtime()
 
 double test()
 {
-	srand(time(0));
+    srand(time(0));
     float *matrix, *vector, *vectorIt;
     matrix = malloc(sizeof(*matrix) * m * n);
     vector = malloc(sizeof(*vector) * n );
@@ -100,17 +100,17 @@ void Math()
     taskPerf = pow((1 / taskPerf), -1); 
     
     deviation = sqrt (dispersion / lNum);
-	average /= lNum;//среднеквадратичное отклонение
-	absError = average - t;
-    relError = absError / average;
+    average /= lNum;//среднеквадратичное отклонение
+    absError = average - t;
+    relError = (absError / average)*100;
 
 	FILE  *file;
 
-	file = fopen("itog.cvs", "a"); 
+    file = fopen("itog.cvs", "a"); 
     fprintf (file, "PModel: Intel(R) Core(TM) i3-6006U CPU @ 2.00GHz \n");
-	fprintf( file, "Task: multiplying a matrix by a vector OpType: -O \nOpt float\nInsCount %d \n",  insCount);
-	fprintf (file, "Timer: time()\nTime: %.6f \nLNum: 10 \nAvTime: %.6f \nAbsErr: %.6f \n", t, average, absError);
-	fprintf (file, "RelErr: %.6f \nTaskPer: %.6f \n\n", relError, taskPerf);
+    fprintf( file, "Task: multiplying a matrix by a vector OpType: -O \nOpt float\nInsCount %d \n",  insCount);
+    fprintf (file, "Timer: time()\nTime: %.6f \nLNum: 10 \nAvTime: %.6f \nAbsErr: %.6f \n", t, average, absError);
+    fprintf (file, "RelErr: %.6f \nTaskPer: %.2f '%' \n\n", relError, taskPerf);
     fclose(file);
  }
 
