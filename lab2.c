@@ -110,7 +110,7 @@ void Math()
     fprintf (file, "PModel: Intel(R) Core(TM) i3-6006U CPU @ 2.00GHz \n");
     fprintf( file, "Task: multiplying a matrix by a vector OpType: -O \nOpt float\nInsCount %d \n",  insCount);
     fprintf (file, "Timer: time()\nTime: %.6f \nLNum: 10 \nAvTime: %.6f \nAbsErr: %.6f \n", t, average, absError);
-    fprintf (file, "RelErr: %.6f \nTaskPer: %.2f '%' \n\n", relError, taskPerf);
+    fprintf (file, "RelErr: %.6f \nTaskPer: %.2f % \n\n", relError, taskPerf);
     fclose(file);
  }
 
