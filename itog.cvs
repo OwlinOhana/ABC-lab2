@@ -46,3 +46,39 @@ AbsErr: 0.004894
 RelErr: 0.495065 
 TaskPer: 4019515753.862433 
 
+PModel: Intel(R) Core(TM) i3-6006U CPU @ 2.00GHz 
+Task: multiplying a matrix by a vector OpType: -O3 
+Opt float
+InsCount 2000000 
+Timer: time()
+Time: 0.001970 
+LNum: 10 
+AvTime: 0.003974 
+AbsErr: 0.002004 
+RelErr: 0.504287 % 
+TaskPer: 10180611894.222242 
+
+PModel: Intel(R) Core(TM) i3-6006U CPU @ 2.00GHz 
+Task: multiplying a matrix by a vector OpType: -O2 
+Opt float
+InsCount 2000000 
+Timer: time()
+Time: 0.003096 
+LNum: 10 
+AvTime: 0.004208 
+AbsErr: 0.001112 
+RelErr: 0.264281 % 
+TaskPer: 9627599125.573040 
+
+PModel: Intel(R) Core(TM) i3-6006U CPU @ 2.00GHz 
+Task: multiplying a matrix by a vector OpType: -O1 
+Opt float
+InsCount 2000000 
+Timer: time()
+Time: 0.004840 
+LNum: 10 
+AvTime: 0.008994 
+AbsErr: 0.004154 
+RelErr: 0.461875 % 
+TaskPer: 4472100819.976290 
+
